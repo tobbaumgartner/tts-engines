@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/main_activity_textinput"
+            android:ems="10"
+            android:id="@+id/main_activity_textinput"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_margin="10dp"/>
+    <Button
+            android:text="@string/main_activity_button_tts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/main_activity_button_tts"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_textinput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_activity_progressBar"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_button_tts"
+            app:layout_constraintStart_toStartOf="parent" android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="10dp"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/main_activity_textview_statusupdate"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_progressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_margin="10dp"/>
+    <TextView
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/main_activity_textview_responsegoogle"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_imageview_google"
+            app:layout_constraintBottom_toBottomOf="@id/main_activity_imageview_google"
+            app:layout_constraintStart_toEndOf="@+id/main_activity_imageview_google"
+            app:layout_constraintEnd_toStartOf="@+id/ratingBar"/>
+
+    <TextView
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/main_activity_textview_responseamazon"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_imageview_amazon"
+            app:layout_constraintBottom_toBottomOf="@id/main_activity_imageview_amazon"
+            app:layout_constraintStart_toEndOf="@+id/main_activity_imageview_amazon"
+            app:layout_constraintEnd_toStartOf="@+id/ratingBar2"/>
+    <TextView
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/main_activity_textview_responseazure"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_imageview_microsoft"
+            app:layout_constraintBottom_toBottomOf="@id/main_activity_imageview_microsoft"
+            app:layout_constraintStart_toEndOf="@+id/main_activity_imageview_microsoft"
+            app:layout_constraintEnd_toStartOf="@+id/ratingBar3"/>
+    <TextView
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/main_activity_textview_responseinternal"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_imageview_internal"
+            app:layout_constraintBottom_toBottomOf="@id/main_activity_imageview_internal"
+            app:layout_constraintStart_toEndOf="@+id/main_activity_imageview_internal"
+            app:layout_constraintEnd_toStartOf="@+id/ratingBar4"/>
+    <TextView
+            android:text="Response times and Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_textview_statusupdate"
+            android:layout_marginTop="40dp" android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent" android:textColor="@android:color/black"/>
+    <ImageView
+            android:layout_width="75dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/google_cloud"
+            android:id="@+id/main_activity_imageview_google"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_activity_imageview_amazon"
+            android:layout_marginStart="8dp"/>
+    <ImageView
+            android:layout_width="75dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_imageview_google"
+            app:layout_constraintBottom_toTopOf="@id/main_activity_imageview_microsoft"
+            app:layout_constraintTop_toBottomOf="@id/main_activity_imageview_google"
+            app:srcCompat="@drawable/amazon_polly" android:id="@+id/main_activity_imageview_amazon"
+            android:padding="10dp"/>
+    <ImageView
+            android:layout_width="75dp"
+            app:layout_constraintStart_toStartOf="@id/main_activity_imageview_google"
+            app:layout_constraintBottom_toTopOf="@id/main_activity_imageview_internal"
+            app:layout_constraintTop_toBottomOf="@id/main_activity_imageview_amazon"
+            android:layout_height="0dp" app:srcCompat="@drawable/microsoft_azure" android:id="@+id/main_activity_imageview_microsoft"/>
+    <ImageView
+            android:layout_width="75dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_imageview_amazon"
+            app:layout_constraintTop_toBottomOf="@id/main_activity_imageview_microsoft"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/android_internal"
+            android:id="@+id/main_activity_imageview_internal" android:padding="15dp"/>
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/ratingBar"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/main_activity_imageview_amazon"
+    />
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/ratingBar2"
+            app:layout_constraintBottom_toTopOf="@id/main_activity_imageview_microsoft"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_imageview_amazon"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/ratingBar3"
+            app:layout_constraintBottom_toTopOf="@id/main_activity_imageview_internal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_imageview_microsoft"/>
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/ratingBar4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_imageview_internal"/>
+
+</android.support.constraint.ConstraintLayout>

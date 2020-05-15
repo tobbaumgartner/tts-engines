@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TextToSpeech</string>
+    <string name="main_activity_textinput">Enter text</string>
+    <string name="main_activity_button_tts">Convert to speech</string>
+</resources>
